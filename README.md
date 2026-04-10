@@ -1,40 +1,81 @@
 # 🚀 OpenCEP Ultra
 
-A API de CEP mais rápida e completa do Brasil. Construída sobre arquitetura **Jamstack**, utilizando **Cloudflare R2** para garantir alta disponibilidade e latência mínima.
+<p align="center">
+  <img src="logo.png" alt="OpenCEP Ultra Logo" width="200"/>
+</p>
 
-## 📍 Diferenciais Únicos
+<p align="center">
+  <b>A API de CEP mais rápida, robusta e escalável do Brasil.</b><br>
+  Construída com arquitetura Jamstack sobre Cloudflare R2 e Workers para performance de nível global.
+</p>
 
-Diferente de outras APIs de CEP, o **OpenCEP Ultra** permite consultas consolidadas que economizam centenas de chamadas:
-
-- **Busca por CEP Individual**: Retorno instantâneo dos dados de um logradouro.
-- **Filtro por Cidade**: Obtenha todos os CEPs de uma cidade em uma única chamada.
-- **Filtro por Bairro**: Acesso detalhado a todos os códigos postais de um bairro específico.
-- **Filtro por Estado**: Base completa de CEPs por UF.
-
-## 🛠️ Como Usar
-
-A API é RESTful e retorna dados no formato JSON.
-
-### Exemplos de Endpoints
-
-| Tipo | Endpoint |
-| :--- | :--- |
-| **CEP Individual** | `https://api-cep.kedllon.solutions/v1/01001000.json` |
-| **Por Cidade** | `https://api-cep.kedllon.solutions/cidades/SP_高度_Sao_Paulo.json` |
-| **Por Bairro** | `https://api-cep.kedllon.solutions/bairros/SP_高度_Sao_Paulo_高度_Se.json` |
-| **Por Estado** | `https://api-cep.kedllon.solutions/estados/AC.json` |
-
-## 🏗️ Arquitetura
-
-Este projeto utiliza:
-- **Hospedagem de Dados:** Cloudflare R2 (Object Storage).
-- **Hospedagem de Docs:** GitHub Pages.
-- **Processamento:** Scripts Python customizados para organização e normalização de dados baseados no projeto OpenCEP original.
-
-## ⚖️ Licença e Ética
-
-Este projeto é um derivado otimizado do projeto [OpenCEP](https://github.com/SeuAliado/OpenCEP). 
-Mantemos a licença **MIT**, permitindo o uso livre e incentivando a colaboração.
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License MIT">
+  <img src="https://img.shields.io/badge/Cloudflare-Workers-FF4A03?logo=cloudflare&logoColor=white" alt="Cloudflare Workers">
+  <img src="https://img.shields.io/badge/Jamstack-000000?logo=jamstack&logoColor=white" alt="Jamstack">
+  <img src="https://img.shields.io/badge/SLA-99.99%25-brightgreen" alt="SLA High">
+</p>
 
 ---
-Desenvolvido por **Kedllon Solutions**.
+
+## 🌟 O que é o OpenCEP Ultra?
+
+O **OpenCEP Ultra** redefine como desenvolvedores brasileiros consomem dados postais. Utilizando uma arquitetura de **Dados Estáticos em Borda (Edge Storage)**, eliminamos a necessidade de bancos de dados tradicionais lentos, entregando respostas em milissegundos com custo operacional zero.
+
+### ✨ Diferenciais de Elite
+- **Performance Extrema:** Servido diretamente da rede de borda da Cloudflare.
+- **Filtros Inteligentes:** Única API gratuita com suporte nativo a filtros por Bairro, Cidade e Estado.
+- **SLA de Elite:** Sem quedas por sobrecarga de banco de dados.
+- **Ética Open Source:** Baseado nos dados do projeto OpenCEP com melhorias contínuas.
+
+---
+
+## 🛠️ Guia de Uso (API Reference)
+
+A API é acessível via qualquer cliente HTTP (Fetch, Axios, cURL).
+
+### 1. Consulta por CEP Individual
+Retorna os dados completos de um logradouro específico.
+- **Endpoint:** `GET /v1/{CEP}.json`
+- **Exemplo:** `https://api-cep.kedllon.solutions/v1/01001000.json`
+
+### 2. Consulta Consolidada por Estado
+Obtenha a base completa de uma UF em uma única chamada de alta velocidade.
+- **Endpoint:** `GET /estados/{UF}.json`
+- **Exemplo:** `https://api-cep.kedllon.solutions/estados/AC.json`
+
+### 3. Filtros por Cidade e Bairro
+Ideal para preenchimento de formulários e dashboards de logística.
+- **Cidades:** `GET /cidades/{UF}_{CIDADE}.json`
+- **Bairros:** `GET /bairros/{UF}_{CIDADE}_{BAIRRO}.json`
+
+---
+
+## 🏗️ Arquitetura Técnica
+
+O projeto é mantido por três pilares tecnológicos:
+
+1.  **Storage (Cloudflare R2):** 1.2 milhões de arquivos JSON servidos com latência ultra-baixa.
+2.  **Routing (Cloudflare Workers):** Um "cérebro" inteligente que gerencia rotas e fornece respostas amigáveis para desenvolvedores.
+3.  **Docs (GitHub Pages):** Documentação técnica e vitrine visual hospedada de forma perene.
+
+---
+
+## 🤝 Contribuição e Comunidade
+
+Este é um projeto aberto! Se você deseja reportar erros, sugerir melhorias ou contribuir com o código:
+
+1.  Veja nosso [Guia de Contribuição](CONTRIBUTING.md).
+2.  Respeite nosso [Código de Conduta](CODE_OF_CONDUCT.md).
+3.  Reporte falhas em nossa seção de [Segurança](SECURITY.md).
+
+---
+
+## ⚖️ Licença
+
+Distribuído sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes.
+
+---
+<p align="center">
+  Desenvolvido com ❤️ por <b>Kedllon Solutions</b>
+</p>
