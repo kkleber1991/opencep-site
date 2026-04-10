@@ -1,0 +1,14 @@
+/* TEAM */
+Chef: Kedllon
+Site: api-cep.kedllon.solutions
+From: Brasil
+
+/* THANKS */
+OpenCEP: SeuAliado (Pela base de dados inicial e espírito open-source)
+Antigravity: Assistência no desenvolvimento, arquitetura Jamstack e design
+
+/* SITE */
+Last update: 2026/04/09
+Standards: HTML5, CSS3, Jamstack
+Components: Cloudflare R2, GitHub Pages, Python
+Software: Desenvolvido com Antigravity by Google Deepmind
